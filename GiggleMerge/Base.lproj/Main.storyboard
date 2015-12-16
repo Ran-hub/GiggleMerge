@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yWD-OB-jak">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Merge-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GiggleMerge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,109 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="jUE-Fy-JpP">
+                                <rect key="frame" x="20" y="72" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="knR-80-cdh"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="7lf-jK-7RP">
+                                <rect key="frame" x="340" y="72" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="AEi-16-aVE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag and drop right image to left image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhj-ic-c6y">
+                                <rect key="frame" x="150" y="233" width="301" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FR3-zn-EOR">
+                                <rect key="frame" x="20" y="262" width="560" height="281"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merged Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dt8-r7-lH5">
+                                <rect key="frame" x="245" y="559" width="111" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="7lf-jK-7RP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="04H-yq-yHi"/>
+                            <constraint firstAttribute="trailing" secondItem="FR3-zn-EOR" secondAttribute="trailing" constant="20" id="57x-uo-53H"/>
+                            <constraint firstItem="7lf-jK-7RP" firstAttribute="width" secondItem="jUE-Fy-JpP" secondAttribute="width" id="G3I-Dk-DMa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FR3-zn-EOR" secondAttribute="bottom" constant="57" id="HrS-iq-gxF"/>
+                            <constraint firstAttribute="trailing" secondItem="7lf-jK-7RP" secondAttribute="trailing" constant="20" id="Hvo-Jr-NKD"/>
+                            <constraint firstItem="Fhj-ic-c6y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I2s-ee-4sK"/>
+                            <constraint firstItem="FR3-zn-EOR" firstAttribute="top" secondItem="Fhj-ic-c6y" secondAttribute="bottom" constant="8" id="Uq1-9x-4x7"/>
+                            <constraint firstItem="7lf-jK-7RP" firstAttribute="leading" secondItem="jUE-Fy-JpP" secondAttribute="trailing" constant="80" id="VqS-f7-IEk"/>
+                            <constraint firstItem="jUE-Fy-JpP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="YQt-mY-A7b"/>
+                            <constraint firstItem="Fhj-ic-c6y" firstAttribute="top" secondItem="7lf-jK-7RP" secondAttribute="bottom" constant="33" id="lGV-n6-psA"/>
+                            <constraint firstItem="jUE-Fy-JpP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="mdb-F1-ZJy"/>
+                            <constraint firstItem="FR3-zn-EOR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="nMU-Ci-Yca"/>
+                            <constraint firstItem="dt8-r7-lH5" firstAttribute="top" secondItem="FR3-zn-EOR" secondAttribute="bottom" constant="16" id="tbV-jF-yTC"/>
+                            <constraint firstItem="dt8-r7-lH5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ubA-yd-MK6"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Merge" id="8Wd-9C-Tle"/>
+                    <connections>
+                        <outlet property="imageViewOne" destination="jUE-Fy-JpP" id="Yiq-BD-4rb"/>
+                        <outlet property="imageViewTwo" destination="7lf-jK-7RP" id="DZO-yN-KTV"/>
+                        <outlet property="panGestureOne" destination="Y36-H1-b9i" id="MHU-TN-rq4"/>
+                        <outlet property="panGestureTwo" destination="2ko-zA-6Dn" id="VA7-K8-Cmk"/>
+                        <outlet property="resultImageView" destination="FR3-zn-EOR" id="gzx-py-MLH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Y36-H1-b9i">
+                    <connections>
+                        <action selector="panGestureActionOne:" destination="BYZ-38-t0r" id="OIY-nC-P8q"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="ap7-J0-Ko1"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="2ko-zA-6Dn">
+                    <connections>
+                        <action selector="panGestureActionTwo:" destination="BYZ-38-t0r" id="Y4W-zp-QaE"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="glP-ye-0So"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="1117" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1SL-BT-M2g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yWD-OB-jak" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="02X-sa-uho">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="z2V-iV-L1V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qF7-nR-Dhl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="1047"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image1" width="1200" height="625"/>
+        <image name="image2" width="900" height="451"/>
+    </resources>
 </document>
